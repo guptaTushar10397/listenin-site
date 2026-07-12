@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Join a room — ListenIn</title>
+<meta name="description" content="You've been invited to a ListenIn room. Open the invite in ListenIn, or get the app to listen to Apple Music together in sync.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%A7%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<style>
+  .invite{text-align:center;padding:64px 0}
+  .invite .logo{font-size:60px;display:block;margin-bottom:18px;filter:drop-shadow(0 8px 34px rgba(168,85,247,.55))}
+  .invite h1{font-size:32px;font-weight:800;letter-spacing:-.02em;margin-bottom:10px}
+  .code{display:inline-block;margin:22px 0 8px;padding:16px 26px;border-radius:16px;
+    font:700 40px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.28em;
+    color:#fff;background:linear-gradient(135deg,var(--brand-1),var(--brand-3));
+    box-shadow:0 10px 34px rgba(124,58,237,.42)}
+  .code-label{color:var(--muted);font-size:14px;text-transform:uppercase;letter-spacing:.1em}
+  .actions{display:flex;flex-direction:column;gap:14px;align-items:center;margin-top:30px}
+  .actions .hint{color:var(--muted-2);font-size:14px;max-width:420px}
+  .btn.secondary{background:none;border:1px solid var(--border);color:var(--text);box-shadow:none}
+  .btn.secondary:hover{border-color:var(--border-hover);filter:none}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="wrap">
+  <a class="brand" href="index.html"><span class="logo">🎧</span> ListenIn</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="support.html">Support</a>
+  </div>
+</div></nav>
+
+<main class="invite"><div class="wrap">
+  <span class="logo">🎧</span>
+  <h1>You're invited to listen together</h1>
+  <p class="lead" id="subtitle">Open this invite in ListenIn to join the room.</p>
+
+  <div id="code-block" hidden>
+    <div class="code-label">Room code</div>
+    <div class="code" id="code">—</div>
+  </div>
+
+  <div class="actions">
+    <a class="btn" id="open-app" href="#">🎧&nbsp; Open in ListenIn</a>
+    <a class="btn secondary" id="get-app" href="https://apps.apple.com/app/listenin/id000000000">Get ListenIn on the App Store</a>
+    <p class="hint" id="hint">If you have ListenIn installed, tapping the original link opens it automatically. Otherwise, install the app and enter the code above.</p>
+  </div>
+</div></main>
+
+<footer><div class="wrap">
+  <span>© 2026 Tushar Gupta</span>
+  <span><a href="privacy.html">Privacy</a> · <a href="support.html">Support</a> · <a href="mailto:support.listenin@gmail.com">support.listenin@gmail.com</a></span>
+</div></footer>
+
+<script>
+  (function () {
+    // Room codes are 6 chars from an unambiguous alphabet (no 0/O/1/I/L),
+    // matching RoomCode.swift exactly: 2-9, A-H, J, K, M, N, P-Z.
+    var ALPHABET = /^[2-9A-HJKMNP-Z]{6}$/;
+    var params = new URLSearchParams(window.location.search);
+    var raw = (params.get('code') || '').trim().toUpperCase();
+
+    if (ALPHABET.test(raw)) {
+      document.getElementById('code').textContent = raw;
+      document.getElementById('code-block').hidden = false;
+      document.getElementById('open-app').href = 'listenin://join?code=' + raw;
+    } else {
+      // No valid code in the link — still let people get the app.
+      document.getElementById('subtitle').textContent =
+        'Get ListenIn to listen to Apple Music together with friends, in sync.';
+      document.getElementById('open-app').hidden = true;
+      document.getElementById('hint').textContent =
+        'Ask your friend to reshare their room link, or open ListenIn and enter their 6-character code.';
+    }
+  })();
+</script>
+</body>
+</html>
