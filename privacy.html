@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — ListenIn</title>
+<meta name="description" content="ListenIn has no user accounts and collects no personal profile. The little data it uses exists only to run a live listening room. No analytics, no ads, no tracking.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%A7%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="nav"><div class="wrap">
+  <a class="brand" href="index.html"><span class="logo">🎧</span> ListenIn</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="support.html">Support</a>
+  </div>
+</div></nav>
+
+<main class="page"><div class="wrap">
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated 12 July 2026</p>
+
+  <p class="lead">ListenIn lets you and your friends listen to Apple Music together, in sync. It has no user accounts and collects no personal profile. The small amount of data it uses exists only to run a live listening room — and to reply to you if you email us.</p>
+
+  <h2>No account, no profile</h2>
+  <p>ListenIn never asks you to sign up. To connect your device to a room, the app signs in <strong>anonymously</strong> through Firebase Authentication (a Google service). This creates a random, anonymous identifier that is not linked to your name, email, phone number, or Apple ID.</p>
+
+  <h2>What a room shares</h2>
+  <p>A "room" is a live session you host or join with a short code. While you're in a room, the app uses Firebase Realtime Database (Google) to synchronize, in real time:</p>
+  <ul>
+    <li>the <strong>display name</strong> you choose — a playful guest name by default, which you can edit;</li>
+    <li>your anonymous identifier and avatar color;</li>
+    <li>the Apple Music songs being <strong>played and queued</strong>, identified by Apple Music catalog IDs together with their title, artist, and artwork.</li>
+  </ul>
+  <p>Everyone in the same room can see the participants' display names and the songs in the session — that's the whole point of listening together. Please don't put personal information in your display name.</p>
+
+  <h2>Your music plays on your own device</h2>
+  <p>ListenIn does not stream, upload, or store any audio. Each person hears a song through <strong>their own Apple Music</strong>, playing on their own device; the app only synchronizes which song to play and when.</p>
+  <p>To do this, the app asks your permission to use Apple Music (MusicKit) and fetches a short-lived Apple Music access token from our token server so it can show the catalog (search, artwork, charts). That request carries only your app's anonymous session token — never your Apple ID, your library, or any personal data — and the token server keeps no record of you.</p>
+
+  <h2>No analytics, no ads, no tracking</h2>
+  <p>ListenIn contains no analytics, advertising, tracking, or third-party data-collection SDKs. Firebase Analytics is turned off.</p>
+
+  <h2>What stays on your device</h2>
+  <p>The display name you pick is saved locally on your device. The Apple Music access token is cached securely in the device Keychain. Neither is shared with us.</p>
+
+  <h2>Data retention</h2>
+  <p>Room data is transient — it exists only to run the live session:</p>
+  <ul>
+    <li>When you leave a room, your participant entry is removed. If your device disconnects unexpectedly, it is removed automatically.</li>
+    <li>When the host ends a room, the entire room and everything in it is deleted.</li>
+  </ul>
+
+  <h2>Third parties</h2>
+  <p>ListenIn's real-time features run on Google Firebase (Authentication and Realtime Database), and music comes from Apple Music. Your use of those services is also governed by <a href="https://policies.google.com/privacy">Google's Privacy Policy</a> and <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>. We do not sell or share your data with anyone, and there is no advertising.</p>
+
+  <h2>Contacting support (optional)</h2>
+  <p>If you use "Report an Issue" or email us, your message is sent from your own email app and includes a short technical footer you can see and edit — the app version, your iOS version, and your device type (for example, "iPhone"). It contains no personal data, you review and send the email yourself, and we use it only to respond to you.</p>
+
+  <h2>Children's privacy</h2>
+  <p>ListenIn is not directed at children under 13 and does not knowingly collect personal information from them.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy changes, we'll update this page and the "last updated" date above.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy? Email <a href="mailto:support.listenin@gmail.com">support.listenin@gmail.com</a>.</p>
+</div></main>
+
+<footer><div class="wrap">
+  <span>© 2026 Tushar Gupta</span>
+  <span><a href="privacy.html">Privacy</a> · <a href="support.html">Support</a> · <a href="mailto:support.listenin@gmail.com">support.listenin@gmail.com</a></span>
+</div></footer>
+</body>
+</html>
