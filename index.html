@@ -2,70 +2,317 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#ffffff">
-<title>ListenIn: Social Music Rooms — Listen to Apple Music together, in sync</title>
-<meta name="description" content="ListenIn lets you and your friends listen to Apple Music together in perfect sync. Start a room, share a code, and everyone hears the same song at the same moment. No account required.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237C3AED'/%3E%3Cstop offset='1' stop-color='%23EC4899'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1024' height='1024' rx='229.09' fill='url(%23g)'/%3E%3Cg transform='translate(399.36,538.79) scale(0.497307)'%3E%3Cg transform=%22translate(0.000000,510.000000) scale(0.100000,-0.100000)%22 fill=%22%23ffffff%22 stroke=%22none%22%3E %3Cpath d=%22M1754 5081 c-49 -22 -88 -70 -103 -126 -15 -57 -15 -4753 0 -4810 34 -123 159 -178 275 -120 54 27 91 74 105 132 11 50 11 4736 0 4786 -14 58 -51 105 -105 132 -60 30 -115 32 -172 6z%22/%3E %3Cpath d=%22M3389 4537 c-29 -16 -54 -40 -74 -72 l-30 -48 0 -1866 0 -1866 27 -45 c74 -127 265 -127 338 2 l25 43 0 1866 0 1866 -30 48 c-37 60 -98 95 -165 95 -30 0 -63 -8 -91 -23z%22/%3E %3Cpath d=%22M952 4109 c-47 -14 -106 -77 -121 -130 -9 -34 -11 -370 -9 -1449 3 -1359 4 -1406 22 -1443 22 -45 78 -85 136 -98 80 -18 172 26 210 101 20 39 20 61 20 1460 0 1390 0 1422 -20 1459 -45 89 -139 128 -238 100z%22/%3E %3Cpath d=%22M2574 3801 c-49 -22 -88 -70 -103 -126 -15 -53 -15 -2194 -1 -2246 47 -168 271 -198 358 -49 l27 45 0 1125 0 1125 -23 42 c-47 89 -166 128 -258 84z%22/%3E %3Cpath d=%22M4225 3311 c-47 -22 -89 -64 -104 -104 -18 -46 -15 -1278 3 -1320 30 -72 129 -126 205 -112 54 10 116 50 143 92 l23 38 0 647 0 646 -30 43 c-57 81 -155 109 -240 70z%22/%3E %3Cpath d=%22M115 3101 c-50 -22 -91 -69 -105 -119 -14 -51 -13 -814 1 -865 14 -52 77 -113 131 -128 86 -23 188 22 228 101 19 37 20 60 20 460 0 394 -1 423 -19 458 -50 98 -159 137 -256 93z%22/%3E %3C/g%3E%3C/g%3E%3Cg transform='translate(143.36,122.88) scale(1.44)'%3E%3Cg transform=%22translate(0.000000,512.000000) scale(0.100000,-0.100000)%22 fill=%22%23ffffff%22 stroke=%22none%22%3E %3Cpath d=%22M2365 4804 c-358 -37 -634 -113 -920 -254 -275 -135 -448 -257 -663 -465 -358 -347 -591 -748 -706 -1215 -70 -284 -69 -275 -73 -1100 -4 -664 -3 -752 12 -812 21 -87 57 -150 120 -213 95 -96 202 -135 368 -135 l97 0 0 750 0 750 -98 0 c-54 0 -121 -6 -150 -14 l-52 -13 0 131 c0 523 151 987 450 1386 306 409 752 709 1241 834 217 56 336 70 569 70 233 0 352 -14 569 -70 489 -125 935 -425 1241 -834 299 -399 450 -863 450 -1386 l0 -131 -52 13 c-29 8 -96 14 -150 14 l-98 0 0 -750 0 -750 97 0 c166 0 273 39 368 135 63 63 99 126 120 213 15 60 16 148 12 812 -4 825 -3 816 -73 1100 -115 467 -348 868 -706 1215 -215 209 -389 331 -663 465 -242 119 -477 192 -755 235 -101 15 -468 28 -555 19z%22/%3E %3Cpath d=%22M1091 2388 c-74 -28 -142 -97 -170 -171 -21 -57 -21 -64 -21 -857 0 -793 0 -800 21 -857 29 -77 96 -143 174 -172 52 -20 75 -22 185 -19 110 3 129 6 156 25 67 48 64 -8 64 1023 0 1031 3 975 -64 1023 -28 20 -45 22 -161 24 -112 2 -137 0 -184 -19z%22/%3E %3Cpath d=%22M3702 2393 c-18 -9 -43 -30 -55 -47 l-22 -31 -3 -943 c-3 -1045 -6 -986 62 -1035 27 -19 46 -22 156 -25 110 -3 133 -1 185 19 78 29 145 95 174 172 21 57 21 64 21 857 0 793 0 800 -21 857 -29 76 -96 143 -172 172 -75 27 -272 30 -325 4z%22/%3E %3C/g%3E%3C/g%3E%3C/svg%3E">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000">
+<title>ListenIn — Listen to Apple Music together, in sync</title>
+<meta name="description" content="Start a room from any Apple Music song, share a six-character code, and listen with friends at the same moment. Free on iPhone, iPad and iPhone Duo. Requires an Apple Music subscription to host or join.">
+<link rel="canonical" href="https://guptaTushar10397.github.io/listenin-site/">
+<meta name="apple-itunes-app" content="app-id=6790826566">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ListenIn">
+<meta property="og:title" content="ListenIn — Listen to Apple Music together">
+<meta property="og:description" content="Start a room, share a code, and everyone hears the same song at the same moment.">
+<meta property="og:url" content="https://guptaTushar10397.github.io/listenin-site/">
+<meta property="og:image" content="https://guptaTushar10397.github.io/listenin-site/img/screen-room.jpg">
+<meta property="og:image:width" content="552">
+<meta property="og:image:height" content="1200">
+<meta property="og:image:alt" content="ListenIn Room screen: room code AK83AQ with Copy and Share buttons, the current song Sunset Horizon by Velvet Noise, and a join request from Guest TQ71 with the Auto-approve joins switch turned off.">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ListenIn — Listen to Apple Music together">
+<meta name="twitter:description" content="Start a room, share a code, and everyone hears the same song at the same moment.">
+<meta name="twitter:image" content="https://guptaTushar10397.github.io/listenin-site/img/screen-room.jpg">
+<meta name="twitter:image:alt" content="ListenIn Room screen: room code AK83AQ with Copy and Share buttons, the current song Sunset Horizon by Velvet Noise, and a join request from Guest TQ71 with the Auto-approve joins switch turned off.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="style.css">
+<script>if('IntersectionObserver' in window)document.documentElement.classList.add('js')</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MobileApplication","name":"ListenIn: Social Music Rooms","alternateName":"ListenIn","operatingSystem":"iOS 26 or later, iPadOS 26 or later","applicationCategory":"MusicApplication","applicationSubCategory":"Social Networking","contentRating":"4+","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"downloadUrl":"https://apps.apple.com/app/id6790826566","installUrl":"https://apps.apple.com/app/id6790826566","url":"https://guptaTushar10397.github.io/listenin-site/","screenshot":["https://guptaTushar10397.github.io/listenin-site/img/screen-room.jpg","https://guptaTushar10397.github.io/listenin-site/img/screen-player.jpg","https://guptaTushar10397.github.io/listenin-site/img/screen-queue.jpg","https://guptaTushar10397.github.io/listenin-site/img/screen-music.jpg","https://guptaTushar10397.github.io/listenin-site/img/screen-join.jpg"],"author":{"@type":"Organization","name":"ListenIn"},"publisher":{"@type":"Organization","name":"ListenIn"},"description":"Listen to Apple Music together. Start a room from any song, share a six-character code, and everyone hears the same song at the same moment. Hosting or joining a room needs an Apple Music subscription."}
+</script>
 </head>
 <body>
-<nav class="nav"><div class="wrap">
-  <a class="brand" href="index.html"><span class="app-icon" aria-hidden="true"></span> ListenIn</a>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="privacy.html">Privacy</a>
-    <a href="support.html">Support</a>
-  </div>
-</div></nav>
+<a class="skip-link" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 9h16M4 15h16"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M3 12V4a1 1 0 0 1 1-1h8l9 9-9 9z"/><circle cx="7.5" cy="7.5" r="1.5"/></symbol>
+  <symbol id="i-noacct" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6M3 3l18 18"/></symbol>
+  <symbol id="i-devices" viewBox="0 0 24 24"><rect x="2" y="4" width="13" height="17" rx="2"/><rect x="15" y="9" width="7" height="12" rx="1.5"/></symbol>
+  <symbol id="i-note" viewBox="0 0 24 24"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+  <symbol id="i-signal" viewBox="0 0 24 24"><path d="M2 9a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19.5" r=".6"/></symbol>
+  <symbol id="i-a11y" viewBox="0 0 24 24"><circle cx="12" cy="4.5" r="1.8"/><path d="M5 8.5l7 1.2 7-1.2M12 9.7v4.8l-3 6.5M12 14.5l3 6.5"/></symbol>
+  <symbol id="g-phone" viewBox="0 0 64 64"><rect x="20" y="5" width="24" height="54" rx="6"/><path d="M28 10h8"/></symbol>
+  <symbol id="g-ipad" viewBox="0 0 64 64"><rect x="5" y="9" width="54" height="46" rx="6"/><rect x="11" y="15" width="18" height="34" rx="2"/><rect x="33" y="15" width="20" height="34" rx="2"/></symbol>
+  <symbol id="g-duo" viewBox="0 0 64 64"><rect x="5" y="12" width="54" height="40" rx="6"/><path d="M32 12v40"/><rect x="11" y="18" width="16" height="28" rx="2"/><rect x="37" y="18" width="16" height="28" rx="2"/></symbol>
+</svg>
 
-<header class="hero"><div class="wrap">
-  <span class="app-icon" aria-hidden="true"></span>
-  <h1>ListenIn</h1>
-  <p class="tagline">Social Music Rooms</p>
-  <p class="subtitle">We don't stream music — we synchronize experiences. A real-time social listening app for iPhone and iPad: start a room, share a short code, and everyone hears the same song at the same moment, each through their own Apple Music.</p>
-  <div class="cta">
-    <a class="appstore" href="https://apps.apple.com/app/id6790826566">
-      <img src="app-store-badge.svg" alt="Download ListenIn on the App Store" width="168" height="56">
-    </a>
+<header class="globalnav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="app-icon" aria-hidden="true"></span>ListenIn</a>
+    <nav class="nav-links" aria-label="Primary">
+      <ul>
+        <li><a href="index.html#how">How it works</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+    </nav>
+    <a class="pill pill-sm" href="https://apps.apple.com/app/id6790826566" >Get the app<span class="vh"> on the App Store</span></a>
+    <details class="menu">
+      <summary aria-label="Menu"><svg class="i" aria-hidden="true"><use href="#i-menu"/></svg><span class="vh">Menu</span></summary>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="index.html#how">How it works</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </nav>
+    </details>
   </div>
-  <div class="badges">
-    <span class="badge"><span class="dot"></span> Powered by Apple Music</span>
-    <span class="badge"><span class="dot"></span> Real-time sync</span>
-    <span class="badge"><span class="dot"></span> No account</span>
-  </div>
-</div></header>
+</header>
 
-<main>
-<section class="wrap">
-  <p class="section-title">How ListenIn works</p>
-  <div class="cards">
-    <div class="card"><div class="ico">🎶</div><h3>Start a room</h3><p>Pick a song and you're hosting. ListenIn gives you a short code to share with friends.</p></div>
-    <div class="card"><div class="ico">👥</div><h3>Invite friends</h3><p>Anyone with the code joins your room in a tap — no sign-up, no password.</p></div>
-    <div class="card"><div class="ico">📡</div><h3>Listen in sync</h3><p>Play, pause, queue, and skip as the host. Everyone stays perfectly in time.</p></div>
+<main id="main">
+
+<section class="band ink hero" aria-labelledby="hero-title">
+  <div class="wrap">
+    <div class="hero-copy center">
+      <p class="eyebrow">ListenIn for iPhone, iPad and iPhone Duo</p>
+      <h1 id="hero-title">Listen together.<br class="br-sm"> Same song, same second.</h1>
+      <p class="lead">Start a room from any song on Apple Music, share a six-character code, and everyone hears it at the same moment, each on their own device.</p>
+      <div class="cta-row">
+        <a class="badge" href="https://apps.apple.com/app/id6790826566"><img src="app-store-badge.svg" alt="Download on the App Store" width="144" height="48" decoding="async"></a>
+        <a class="more" href="#how">See how it works <svg class="i" aria-hidden="true"><use href="#i-chev"/></svg></a>
+      </div>
+      <p class="fine">Free. Requires iOS or iPadOS 26 or later. Hosting or joining a room needs an active Apple Music subscription.<sup><a href="#fn1" id="fnref1-a" aria-label="Footnote 1">1</a></sup></p>
+    </div>
+    <div class="hero-stage">
+      <div class="device front"><img src="img/screen-room.jpg" width="552" height="1200" fetchpriority="high" decoding="async" alt="ListenIn Room screen: room code AK83AQ with Copy and Share buttons, the current song Sunset Horizon by Velvet Noise, and a join request from Guest TQ71 with the Auto-approve joins switch turned off."></div>
+      <div class="device back" aria-hidden="true"><img src="img/screen-player.jpg" width="552" height="1200" loading="lazy" decoding="async" alt=""></div>
+    </div>
   </div>
 </section>
 
-<section class="wrap">
-  <div class="callout">
-    <h2>Private by design</h2>
-    <p>No sign-up and no profile — ListenIn connects you anonymously. A room shares only the display name you choose and the songs being played; the music itself plays through your own Apple Music, on your own device. No analytics, no ads, no tracking.</p>
+<section class="facts alt">
+  <div class="wrap">
+    <ul aria-label="At a glance">
+      <li><svg class="i" aria-hidden="true"><use href="#i-tag"/></svg>Free, no in-app purchases</li>
+      <li><svg class="i" aria-hidden="true"><use href="#i-noacct"/></svg>No account, no password</li>
+      <li><svg class="i" aria-hidden="true"><use href="#i-devices"/></svg>iPhone, iPad and iPhone Duo</li>
+      <li><svg class="i" aria-hidden="true"><use href="#i-note"/></svg>Works with Apple Music</li>
+    </ul>
   </div>
 </section>
 
-<section class="wrap download">
-  <p class="section-title">Get ListenIn</p>
-  <h2 class="download-title">Free on the App Store</h2>
-  <p class="download-sub">For iPhone and iPad. No account required.</p>
-  <a class="appstore" href="https://apps.apple.com/app/id6790826566">
-    <img src="app-store-badge.svg" alt="Download ListenIn on the App Store" width="168" height="56">
-  </a>
+<section class="band" id="how" aria-labelledby="how-title">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">How it works</p>
+      <h2 class="h2" id="how-title">Three steps to a room.</h2>
+    </div>
+    <ol class="steps">
+      <li><span class="num" aria-hidden="true">1</span><h3>Pick a song.</h3><p>Browse charts and playlists or search Apple Music. Tap any song and your room is live.</p></li>
+      <li><span class="num" aria-hidden="true">2</span><h3>Share the code.</h3><p>Every room gets a six-character code. Copy it, or tap Share to send an invite link.</p></li>
+      <li><span class="num" aria-hidden="true">3</span><h3>Let friends in.</h3><p>Friends ask to join with your code, and you let them in. Or turn on Auto-approve, and anyone with the code joins straight away.</p></li>
+    </ol>
+    <p class="note center">Codes leave out look-alike characters such as 0 and O, or 1 and I, so they're easy to read out loud.</p>
+  </div>
 </section>
+
+<section class="band" aria-labelledby="start-title">
+  <div class="wrap chapter">
+    <div class="copy">
+      <p class="eyebrow">Start a room</p>
+      <h2 class="h2" id="start-title">Every song<br class="br-sm"> is a way in.</h2>
+      <p class="body">Explore Top Songs, trending charts, city and genre charts and featured playlists, or search across songs, albums, artists and playlists. Tap a song and you're hosting. Browsing is free once you allow Apple Music access.<sup><a href="#fn1" id="fnref1-b" aria-label="Footnote 1">1</a></sup></p>
+      <a class="more" href="#requirements">What you need <svg class="i" aria-hidden="true"><use href="#i-chev"/></svg></a>
+    </div>
+    <div class="media"><div class="plate"><div class="device"><img src="img/screen-music.jpg" width="552" height="1200" loading="lazy" decoding="async" alt="ListenIn Music tab with a search field for songs, albums, artists and playlists, and rows of Top Songs and Trending Now."></div></div></div>
+  </div>
+</section>
+
+<section class="band tint" aria-labelledby="invite-title">
+  <div class="wrap chapter flip">
+    <div class="copy">
+      <p class="eyebrow">Share the code</p>
+      <h2 class="h2" id="invite-title">Six characters.<br class="br-sm"> That's the invite.</h2>
+      <p class="body">Each room has a six-character code that leaves out look-alike characters, so it's easy to read out loud. Send it as a link and it opens ListenIn right at the join screen. Friends who don't have the app yet see the code and a link to the App Store.</p>
+      <div class="code-spec" aria-hidden="true">K7P2XM</div>
+      <a class="more" href="https://apps.apple.com/app/id6790826566">Get the app <svg class="i" aria-hidden="true"><use href="#i-chev"/></svg></a>
+    </div>
+    <div class="media"><div class="device"><img src="img/screen-join.jpg" width="552" height="1200" loading="lazy" decoding="async" alt="ListenIn Join a Room screen asking for the room code your friend shared, with a Join Room button and a Browse Music option to start your own room."></div></div>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="host-title">
+  <div class="wrap chapter">
+    <div class="copy">
+      <p class="eyebrow">You're the host</p>
+      <h2 class="h2" id="host-title">You decide<br class="br-sm"> who comes in.</h2>
+      <p class="body">Friends ask to join with your code, and their request waits for you. Let them in, or decline. Want it open? Turn on Auto-approve joins, and anyone with the code joins instantly. It's off until you turn it on, so no one gets in without your OK.</p>
+    </div>
+    <div class="media"><figure class="detail"><img src="img/screen-room.jpg" width="552" height="1200" loading="lazy" decoding="async" alt="Join requests in a ListenIn room: one person waiting, the Auto-approve joins switch turned off, and Guest TQ71 with buttons to decline or let them in."></figure></div>
+  </div>
+</section>
+
+<section class="band ink sync center" aria-labelledby="sync-title">
+  <div class="wrap">
+    <p class="eyebrow">Always in step</p>
+    <h2 class="h2" id="sync-title">Everyone hears<br class="br-sm"> the same moment.</h2>
+    <p class="body">The host sets the pace: play, pause, skip. Everyone in the room follows. ListenIn keeps everyone in step with the host and quietly catches up anyone who slips. If you fall behind, a Sync button appears in your player. One tap brings you back.<sup><a href="#fn3" id="fnref3-a" aria-label="Footnote 3">3</a></sup></p>
+    <div class="device"><img src="img/screen-player.jpg" width="552" height="1200" loading="lazy" decoding="async" alt="ListenIn full-screen player showing Sunset Horizon by Velvet Noise with playback controls, copy, AirPlay and share buttons, and an End Room button."></div>
+    <dl class="specs">
+      <div><dt>In step</dt><dd>Everyone hears the same part of the song as the host.<sup><a href="#fn3" id="fnref3-b" aria-label="Footnote 3">3</a></sup></dd></div>
+      <div><dt>Your Apple Music</dt><dd>Each person plays on their own device, with their own subscription.</dd></div>
+      <div><dt>No audio sent</dt><dd>ListenIn shares only which song, where it is, and whether it's playing.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="queue-title">
+  <div class="wrap chapter flip">
+    <div class="copy">
+      <p class="eyebrow">Shared queue</p>
+      <h2 class="h2" id="queue-title">A queue the whole<br class="br-sm"> room can add to.</h2>
+      <p class="body">Anyone in the room can request a song from Apple Music. As the host, you approve or decline each request, add your own picks, drag to reorder, shuffle and skip.</p>
+      <div class="can">
+        <div>
+          <h3>Listeners can</h3>
+          <ul>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Request any song from Apple Music</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Leave, and ask to rejoin later with the same code</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Hosts can</h3>
+          <ul>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Approve or decline requests</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Drag to reorder, shuffle and skip</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>End the room for everyone</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="media"><div class="plate"><div class="device"><img src="img/screen-queue.jpg" width="552" height="1200" loading="lazy" decoding="async" alt="ListenIn Queue screen: two song requests from a guest, each with decline and approve buttons, and an Up Next list with a Shuffle button and a Drag to reorder hint."></div></div></div>
+  </div>
+</section>
+
+<section class="band tint center" aria-labelledby="devices-title">
+  <div class="wrap">
+    <p class="eyebrow">iPhone, iPad and iPhone Duo</p>
+    <h2 class="h2" id="devices-title">Room to spread out.</h2>
+    <p class="body wide">On iPad or an unfolded iPhone Duo, the room opens into two columns: the code, the song and the listeners on one side, and join requests and the queue on the other. The player shows the queue next to the artwork. Turn or fold your device, and the layout follows without losing your place.<sup><a href="#fn2" id="fnref2-a" aria-label="Footnote 2">2</a></sup></p>
+    <ul class="tiles">
+      <li><svg class="i glyph" aria-hidden="true"><use href="#g-phone"/></svg><h3>iPhone</h3><p>Everything in one column.</p></li>
+      <li><svg class="i glyph" aria-hidden="true"><use href="#g-ipad"/></svg><h3>iPad</h3><p>Room and queue side by side, even with another app open next to it.</p></li>
+      <li><svg class="i glyph" aria-hidden="true"><use href="#g-duo"/></svg><h3>iPhone Duo</h3><p>One column folded. Two columns unfolded.</p></li>
+    </ul>
+    <p class="a11y"><svg class="i" aria-hidden="true"><use href="#i-a11y"/></svg>Built for everyone. ListenIn works with VoiceOver, follows your preferred text size, and respects Reduce Motion.</p>
+  </div>
+</section>
+
+<section class="band" id="privacy" aria-labelledby="privacy-title">
+  <div class="wrap split">
+    <div>
+      <svg class="i lock" aria-hidden="true"><use href="#i-lock"/></svg>
+      <p class="eyebrow">Privacy</p>
+      <h2 class="h2" id="privacy-title">Private by design.</h2>
+      <p class="body">No sign-up, no email, no password. Just open the app and you're in. ListenIn gives you a guest name, which you can change any time.</p>
+    </div>
+    <div>
+      <ul class="points">
+        <li><strong>No ads, no tracking.</strong> ListenIn shows no ads and never tracks you across other apps or websites.</li>
+        <li><strong>A room shares only what it needs.</strong> The people in your room see your display name and the songs being played, queued and requested.</li>
+        <li><strong>Rooms don't last.</strong> When the host ends a room, it's deleted. And every room ends on its own within a day.</li>
+        <li><strong>A little anonymous information, never linked to you.</strong> ListenIn uses it to see which features people use, fix crashes and keep the app running smoothly. It's never used to track you.</li>
+        <li><strong>Your music stays yours.</strong> ListenIn never sends or keeps any audio. Your music plays from your own Apple Music.</li>
+      </ul>
+      <a class="more" href="privacy.html">Read the privacy policy <svg class="i" aria-hidden="true"><use href="#i-chev"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="band alt center" id="requirements" aria-labelledby="req-title">
+  <div class="wrap">
+    <p class="eyebrow">Requirements</p>
+    <h2 class="h2-sm" id="req-title">What you need.</h2>
+    <p class="body">ListenIn is free, with no in-app purchases. Here's what it takes to start or join a room.</p>
+    <ul class="reqs">
+      <li><svg class="i" aria-hidden="true"><use href="#i-note"/></svg><h3>Apple Music</h3><p>An active subscription to host or join a room. Browsing is free.<sup><a href="#fn1" id="fnref1-c" aria-label="Footnote 1">1</a></sup></p></li>
+      <li><svg class="i" aria-hidden="true"><use href="#i-devices"/></svg><h3>iPhone, iPad or iPhone Duo</h3><p>Running iOS or iPadOS 26 or later.<sup><a href="#fn2" id="fnref2-b" aria-label="Footnote 2">2</a></sup></p></li>
+      <li><svg class="i" aria-hidden="true"><use href="#i-signal"/></svg><h3>A connection</h3><p>Wi-Fi or cellular, so the room stays in sync.<sup><a href="#fn3" id="fnref3-c" aria-label="Footnote 3">3</a></sup></p></li>
+      <li><svg class="i" aria-hidden="true"><use href="#i-noacct"/></svg><h3>Nothing else</h3><p>No account, no email, no password.</p></li>
+    </ul>
+    <div class="center-cta"><a class="pill" href="https://apps.apple.com/app/id6790826566" >Get the app<span class="vh"> on the App Store</span></a></div>
+  </div>
+</section>
+
+<section class="band" id="faq" aria-labelledby="faq-title">
+  <div class="wrap narrow">
+    <p class="eyebrow">FAQ</p>
+    <h2 class="h2-sm" id="faq-title">Questions? Answers.</h2>
+    <div class="qa">
+      <div><h3>Do my friends need Apple Music too?</h3><p>Yes. Each person plays the music through their own Apple Music subscription on their own device. ListenIn only keeps everyone on the same song at the same spot.</p></div>
+      <div><h3>Why am I waiting to join?</h3><p>The host lets each person in. If they've turned on Auto-approve joins, you're in straight away. If the host doesn't answer after a little while, your request ends and you can ask again.</p></div>
+      <div><h3>Does it work on iPad?</h3><p>Yes, and on iPhone Duo. On iPad and on an unfolded iPhone Duo, the room and the queue show side by side.</p></div>
+      <div><h3>How long does a room last?</h3><p>Until the host ends it, and never longer than a day. If the host has been away for a while, the room stops letting new people in.</p></div>
+      <div><h3>What if I'm already in a room?</h3><p>Opening another invite asks whether you want to switch rooms first. Confirm, and ListenIn leaves your current room and asks to join the new one.</p></div>
+    </div>
+    <a class="more" href="support.html">More answers in Support <svg class="i" aria-hidden="true"><use href="#i-chev"/></svg></a>
+  </div>
+</section>
+
+<section class="band closing" aria-labelledby="cta-title">
+  <div class="wrap">
+    <div class="tile-cta">
+      <span class="app-icon icon-lg" aria-hidden="true"></span>
+      <h2 class="h2" id="cta-title">Press play together.</h2>
+      <p>Start a room tonight. Friends join with your code.</p>
+      <a class="badge" href="https://apps.apple.com/app/id6790826566"><img src="app-store-badge.svg" alt="Download on the App Store" width="144" height="48" loading="lazy" decoding="async"></a>
+      <p class="fine">Free on the App Store. Requires iOS or iPadOS 26 or later and an Apple Music subscription to host or join a room.<sup><a href="#fn1" id="fnref1-d" aria-label="Footnote 1">1</a></sup></p>
+    </div>
+  </div>
+</section>
+
+<section class="footnotes" aria-labelledby="fn-title">
+  <div class="wrap"><div>
+    <h2 id="fn-title" class="vh">Footnotes</h2>
+    <ol>
+      <li id="fn1">Starting or joining a room needs an active Apple Music subscription, sold separately by Apple. If you don't have one, ListenIn shows Apple's offer to get Apple Music. ListenIn doesn't sell subscriptions. Browsing charts, playlists and search is free once you allow Apple Music access. If a subscription lapses during a room, playback pauses and you stay in the room. <a href="#fnref1-a" aria-label="Back to content">↩</a></li>
+      <li id="fn2">Requires iOS or iPadOS 26 or later. Works on iPhone, iPad and iPhone Duo. The side-by-side layout appears on iPad and on an unfolded iPhone Duo. There's no Mac or Apple Watch app. <a href="#fnref2-a" aria-label="Back to content">↩</a></li>
+      <li id="fn3">How closely everyone stays in step depends on each person's internet connection. If you fall behind, ListenIn catches you up automatically, or you can tap Sync. <a href="#fnref3-a" aria-label="Back to content">↩</a></li>
+    </ol>
+  </div></div>
+</section>
+
 </main>
 
-<footer><div class="wrap">
-  <span>© 2026 Tushar Gupta</span>
-  <span><a href="privacy.html">Privacy</a> · <a href="support.html">Support</a> · <a href="mailto:support.listenin@gmail.com">support.listenin@gmail.com</a></span>
-</div></footer>
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <nav aria-labelledby="f-product"><h2 class="footer-h" id="f-product">Product</h2><ul>
+        <li><a href="index.html#how">How it works</a></li>
+        <li><a href="index.html#requirements">What you need</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="https://apps.apple.com/app/id6790826566">Download on the App Store</a></li>
+      </ul></nav>
+      <nav aria-labelledby="f-support"><h2 class="footer-h" id="f-support">Support</h2><ul>
+        <li><a href="support.html">Help and FAQ</a></li>
+        <li><a href="support.html#report">Report an issue</a></li>
+        <li><a href="mailto:support.listenin@gmail.com">Contact us</a></li>
+      </ul></nav>
+      <nav aria-labelledby="f-legal"><h2 class="footer-h" id="f-legal">Legal</h2><ul>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="privacy.html#analytics">How we improve the app</a></li>
+      </ul></nav>
+    </div>
+    <p>Apple, the Apple logo, Apple Music, iPhone, iPad, iPadOS and VoiceOver are trademarks of Apple Inc., registered in the U.S. and other countries and regions. App Store is a service mark of Apple Inc. ListenIn is an independent app and is not affiliated with or endorsed by Apple.</p>
+    <div class="legal-row"><span>Copyright © 2026 ListenIn. All rights reserved.</span><a href="mailto:support.listenin@gmail.com">support.listenin@gmail.com</a></div>
+  </div>
+</footer>
+
 </body>
 </html>
