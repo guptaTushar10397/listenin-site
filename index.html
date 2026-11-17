@@ -32,11 +32,15 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"MobileApplication","name":"ListenIn: Social Music Rooms","alternateName":"ListenIn","operatingSystem":"iOS 26 or later, iPadOS 26 or later","applicationCategory":"MusicApplication","applicationSubCategory":"Social Networking","contentRating":"4+","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"downloadUrl":"https://apps.apple.com/app/id6790826566","installUrl":"https://apps.apple.com/app/id6790826566","url":"https://guptaTushar10397.github.io/listenin-site/","screenshot":["https://guptaTushar10397.github.io/listenin-site/img/screen-room.jpg","https://guptaTushar10397.github.io/listenin-site/img/screen-player.jpg","https://guptaTushar10397.github.io/listenin-site/img/screen-queue.jpg","https://guptaTushar10397.github.io/listenin-site/img/screen-music.jpg","https://guptaTushar10397.github.io/listenin-site/img/screen-join.jpg"],"author":{"@type":"Organization","name":"ListenIn"},"publisher":{"@type":"Organization","name":"ListenIn"},"description":"Listen to Apple Music together. Start a room from any song, share a six-character code, and everyone hears the same song at the same moment. Hosting or joining a room needs an Apple Music subscription."}
 </script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"VideoObject","name":"ListenIn: listen together, same song, same second","description":"A 56-second film showing how ListenIn works: start a room, share a six-character code, and everyone hears the same Apple Music song at the same moment. Hosts approve songs and who joins.","thumbnailUrl":"https://guptaTushar10397.github.io/listenin-site/video/listenin-film-poster.jpg","uploadDate":"2026-11-17","duration":"PT56S","contentUrl":"https://guptaTushar10397.github.io/listenin-site/video/listenin-film-1080.mp4","embedUrl":"https://guptaTushar10397.github.io/listenin-site/#film","publisher":{"@type":"Organization","name":"ListenIn"}}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <symbol id="i-chev" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></symbol>
   <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 9h16M4 15h16"/></symbol>
   <symbol id="i-tag" viewBox="0 0 24 24"><path d="M3 12V4a1 1 0 0 1 1-1h8l9 9-9 9z"/><circle cx="7.5" cy="7.5" r="1.5"/></symbol>
   <symbol id="i-noacct" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6M3 3l18 18"/></symbol>
@@ -85,6 +89,7 @@
       <p class="lead">Start a room from any song on Apple Music, share a six-character code, and everyone hears it at the same moment, each on their own device.</p>
       <div class="cta-row">
         <a class="badge" href="https://apps.apple.com/app/id6790826566"><img src="app-store-badge.svg" alt="Download on the App Store" width="144" height="48" decoding="async"></a>
+        <a class="more" href="#film" data-film>Watch the film <svg class="i i-fill" aria-hidden="true"><use href="#i-play"/></svg></a>
         <a class="more" href="#how">See how it works <svg class="i" aria-hidden="true"><use href="#i-chev"/></svg></a>
       </div>
       <p class="fine">Free. Requires iOS or iPadOS 26 or later. Hosting or joining a room needs an active Apple Music subscription.<sup><a href="#fn1" id="fnref1-a" aria-label="Footnote 1">1</a></sup></p>
@@ -104,6 +109,21 @@
       <li><svg class="i" aria-hidden="true"><use href="#i-devices"/></svg>iPhone, iPad and iPhone Duo</li>
       <li><svg class="i" aria-hidden="true"><use href="#i-note"/></svg>Works with Apple Music</li>
     </ul>
+  </div>
+</section>
+
+<section class="band film-band" id="film" aria-labelledby="film-title">
+  <div class="wrap center">
+    <h2 class="h2 film-title" id="film-title">Watch a song turn into a room.</h2>
+    <div class="film">
+      <video id="film-video" aria-label="ListenIn film" controls playsinline preload="none" poster="video/listenin-film-poster.jpg" width="1920" height="1080" aria-describedby="film-desc">
+        <source src="video/listenin-film-720.mp4" type="video/mp4" media="(max-width: 800px)">
+        <source src="video/listenin-film-1080.mp4" type="video/mp4">
+        <a href="video/listenin-film-1080.mp4">Download the ListenIn film (MP4)</a>
+      </video>
+      <button class="film-play" type="button" hidden><span><svg class="i i-fill" aria-hidden="true"><use href="#i-play"/></svg>Play the film</span></button>
+    </div>
+    <p class="vh" id="film-desc">A 56-second film with music and no speech. It shows friends hearing the same song at different points, then ListenIn keeping everyone on the same second: start a room and share a code or invite link, friends join with just a display name, each person plays from Apple Music on their own device, the host approves songs and who joins, Sync catches you up, and the app shows no ads and no tracking. ListenIn is free on iPhone and iPad and requires an Apple Music subscription.</p>
   </div>
 </section>
 
@@ -314,5 +334,21 @@
   </div>
 </footer>
 
+<script>
+(function(){
+  var v=document.getElementById('film-video'),b=document.querySelector('.film-play');
+  if(!v)return;
+  if(b){b.hidden=false;v.controls=false;b.addEventListener('click',function(){v.play()});}
+  v.addEventListener('play',function(){if(b)b.hidden=true;v.controls=true});
+  document.querySelectorAll('a[data-film]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      var still=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      document.getElementById('film').scrollIntoView({behavior:still?'auto':'smooth',block:'center'});
+      v.play();
+    });
+  });
+})();
+</script>
 </body>
 </html>
